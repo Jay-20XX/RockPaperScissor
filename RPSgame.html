@@ -1,0 +1,61 @@
+<script>
+
+function playRound() {
+	// your code here!
+   
+    let yourSelection = prompt("pick rock, paper, or scissors")
+    
+    if (yourSelection.toLowerCase() === 'rock') {
+         console.log('you pick rock')
+       }
+    else if (yourSelection.toLowerCase() === 'paper') {
+       console.log('you pick paper')
+       
+       }
+    else if (yourSelection.toLowerCase() === 'scissors') {
+       console.log('you pick scissor')
+       
+       } 
+    else  {
+        return ("Do you know how to play?")
+        
+       } 
+
+    let computerPick = Math.floor(Math.random() * 99) + 1
+     
+    if (computerPick <= 33) {
+        console.log('cpu pick rock')
+    }
+        else if (computerPick <= 66) {
+            console.log('cpu pick paper')
+        } 
+        else {
+            console.log('cpu pick scissor')
+        }
+        
+
+    if (yourSelection === 'rock' && computerPick >=33 && computerPick <=66 ){
+        console.log('you lose, better luck next time.')
+    } 
+       else if (yourSelection === 'rock' && computerPick >= 66 ){
+           console.log('you win, good job!')
+       }
+       else if (yourSelection === 'paper' && computerPick <= 33){
+           console.log('you win, good job!')
+       }
+       else if (yourSelection === 'paper' && computerPick >= 66){
+           console.log('you lose, better luck next time.')
+       }
+       else if (yourSelection === 'scissor' && computerPick <= 33){
+           console.log('you lose, better luck next time.')
+       }
+       else if (yourSelection === 'scissor' && computerPick >=33 && computerPick <=66 ){
+           console.log('you win, good job!')
+       }
+       else {
+           console.log('is a tie!')
+       }
+
+}
+
+</script>
